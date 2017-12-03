@@ -1,9 +1,11 @@
 import $ from 'jquery';
-import App from './components/App';
+import Header from './components/Header';
+import Product from './components/Product';
 
 class Main {
     constructor() {
-        new App();
+        new Header();
+        new Product();
     }
 }
 

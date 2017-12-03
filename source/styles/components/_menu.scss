@@ -2,8 +2,14 @@
     display: none;
     padding: 0;
     background: $purple;
+    z-index: 99;
+    top: 85px;
+    height: 100%;
+    position: fixed;
 	@include tablet {
         display: block;
+        position: relative;
+        transform: translateY(-100%);
 	}
 	@include clearfix();
 
@@ -15,7 +21,7 @@
         margin: 0 auto;
         
         .wrapper__group {			
-			padding: 0 10px;
+			padding: 0;
             list-style: none;
             margin: 0;
 			@include clearfix();
@@ -25,16 +31,15 @@
 
 			.group__item {
 				width: 100%;
-				height: auto;
-				padding: 20px 0;
-				float: left;
+				height: 60px;
+                float: left;
+                border-bottom: 1px #714481 solid;
 				
 				@include border-radius(5px);
 				@include tablet {
 					width: 11%;
-					height: 60px;
 					float: left;
-					padding: 5px 0;
+                    padding: 5px 0;
 
 					&:last-child {
 						margin: 0 0 0 0;
@@ -42,7 +47,10 @@
                 }
                 
                 &.sign {
-                    width: 32%;
+                    width: 100%;
+                    @include tablet {
+                        width: 32%;
+                    }
 
                     .item__text {
                         &:hover {
@@ -72,13 +80,17 @@
 					color: $white;
                     height: 100%;
                     margin: 0;
-                    
-                    text-align: center;
+                    text-align: left;
+                    padding-left: 5%;
                     -webkit-transition: all 0.2s ease-in;
                     -moz-transition: all 0.2s ease-in;
                     -o-transition: all 0.2s ease-in;
                     transition: all 0.2s ease-in;
                     position: relative;
+                    @include tablet {
+                        text-align: center;
+                        padding-left: 0;
+                    }
 
                     &:hover {
                         cursor: pointer;
