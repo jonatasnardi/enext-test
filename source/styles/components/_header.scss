@@ -1,0 +1,214 @@
+.header {
+	padding: 10px 0 0 0;
+	@include tablet {
+		padding: 10px 40px 0 40px;	
+	}
+	@include clearfix();
+
+	.header__wrapper {
+		max-width: $desktop-width;
+		width: 100%;
+		height: auto;
+		@include clearfix();
+		margin: 0 auto;
+	}	
+	.header__navbar {
+		width: 20%;
+		float: left;
+		z-index: 999;
+		position: relative;
+		@include tablet {
+			display: none;
+		}
+		.navbar-toggle {
+			margin-top: 18px;
+	
+			.icon {
+				position: relative;
+				width: 30px;
+				height: 24px;
+				margin: 0 auto;
+				cursor: pointer;
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+				transition: all .3s ease;
+			}
+			.line {
+				height: 4px;
+				width: 30px;
+				margin: 2px 0;
+				background: $purple;
+				position: absolute;
+				border-radius: 10px;
+				transition: all .3s ease;
+				&.line-top {
+					transform: rotate(0);
+				}
+				&.line-mid {
+					opacity: 1;
+					transform: rotate(0) translateY(7px);
+				}
+				&.line-bot {
+					transform: rotate(0) translateY(14px);
+				}
+			}
+			&.close {
+				.icon {
+					width: 30px;
+					transform: translateY(7px);
+					.line-top {
+						transform: rotate(45deg) translateY(0);
+					}
+					.line-mid {
+						opacity: 0;
+					}
+					.line-bot {
+						transform: rotate(-45deg) translateY(0);
+					}
+				}
+			}
+		}
+	}
+
+	.header__help {
+		display: none;
+		width: 100%;
+		height: 85px;
+		background: $white;
+		z-index: 90;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	.header__logo {
+		width: 60%;
+		float: left;
+		@include tablet {
+			width: 240px;	
+		}
+
+		.logo__image {
+			width: 100%;
+			margin-top: 8px;
+		}
+	}
+
+	.header__bag {
+		width: 20%;
+		float: left;
+		text-align: center;
+		@include tablet {
+			width: 15%;	
+		}
+
+		.bag__image {
+			width: auto;
+			margin: 0 auto;
+			@include tablet {
+				float: left;
+				margin-left: 25%;
+				margin-top: 10px;
+			}
+		}
+
+		.bag__text {
+			font-family: $font-rob-bd;
+			font-size: 14px;
+			color: #b3b3b3;
+			margin: 0;
+			@include tablet {
+				float: left;
+				margin-left: 10px;
+				margin-top: 25px;
+			}
+
+			span {
+				color: #d73a1e;
+			}
+		}
+	}
+
+	.header__search {
+		display: none;
+		float: left;
+		width: 50%;
+		padding: 15px 0;
+		margin-left: 7%;
+		text-align: left;
+		position: fixed;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 999;
+		@include tablet {
+			width: 23%;
+			display: block;
+			position: relative;
+			left: 0;
+			transform: translateX(0%);
+		}
+		
+
+		.box__form {
+			@include clearfix();
+			.form__stock {
+				width: 100%;
+				float: left;
+				text-align: left;
+				font-family: $font-rob-md;
+				font-size: 16px;
+				background: url("../img/icon-search.png") no-repeat 5px center;
+				border: 1.5px $gray-dark solid;
+				padding: 8px 20px 8px 40px;
+				color: #a9abc3;
+				margin: 0 5% 0 0;
+				@include border-radius(5px);
+
+				&.error {
+					border: 2px $red solid;
+					color: $red;
+				}
+			}
+		}
+	}
+
+	.header__information {
+		float: left;
+		width: 18%;
+		margin-left: 7%;
+		padding: 15px 0;
+		text-align: left;
+		
+
+		.information__text {
+			font-family: $font-rob-bd;
+			font-size: 18px;
+			color: #d73a1e;
+			margin: 0;
+			font-style: italic;
+			span {
+				font-size: 16px;
+			}
+		}
+	}
+
+	.header__description {
+		float: left;
+		width: 100%;
+		background: #e6e6e6;
+		padding: 15px 0;
+		text-align: center;
+		@include tablet {
+			display: none;
+		}
+		
+
+		.description__text {
+			font-family: $font-rob-bd;
+			font-size: 16px;
+			color: #636363;
+			margin: 0;
+		}
+	}
+	
+}
