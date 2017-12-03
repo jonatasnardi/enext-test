@@ -1,0 +1,154 @@
+.footer {
+	background: #e6e6e6;
+	padding: 20px;
+	@include clearfix();
+	.footer__wrapper {
+		width: 100%;
+		.wrapper__newsletter {
+			background: $white;
+			padding: 10px 20px;
+	
+			.newsletter__title {
+				font-family: $font-rob-md;
+				font-size: 16px;
+				font-style: italic;
+				color: #282236;
+			}
+
+			.newsletter__subtitle {
+				font-family: $font-rob-md;
+				font-size: 14px;
+				color: #282236;
+			}
+
+			.box__form {
+				@include clearfix();
+				.form__email {
+					width: 70%;
+					float: left;
+					text-align: left;
+					font-family: $font-rob-md;
+					font-size: 16px;
+					border: 1.5px $gray-dark solid;
+					padding: 8px 20px;
+					color: #a9abc3;
+					margin: 0 5% 0 0;
+					@include border-radius(5px);
+
+					@include tablet {
+						display: inline-block;
+						width: 65%;
+						text-align: left;
+						margin-top: 30px;
+					}
+
+					&.error {
+						border: 2px $red solid;
+						color: $red;
+					}
+				}
+
+				.form__button {
+					width: 25%;
+					display: block;
+					float: left;
+					padding: 10px 5px;
+					background: #d73a1e;
+					font-family: $font-rob-bd;
+					font-size: 14px;
+					cursor: pointer;
+					@include border-radius(5px);
+
+					@include tablet {
+						padding: 16px 0;
+						display: inline-block;
+						width: 30%;
+						margin-left: 2.5%;
+					}
+
+					@include desktop {
+						margin-left: 4%;
+					}
+				}
+			}
+		}
+
+		.wrapper__social {
+			.social__group {
+				list-style: none;
+				width: 100%;
+				padding: 0;
+				@include clearfix();
+				@include tablet {
+				}
+	
+				.group__item {
+					width: 20%;
+					height: auto;
+					float: left;
+					text-align: center;
+
+					.item__icon {
+						margin: 0 auto;
+					}
+				}
+			}
+
+			.social__rights {
+				font-family: $font-rob-md;
+				font-size: 16px;
+				color: #6c7097;
+				margin: 10px 0;
+				text-align: center;
+			}
+		}
+	}
+
+	.header__logo {
+		width: 60%;
+		float: left;
+
+		.logo__image {
+			width: 100%;
+			margin-top: 8px;
+		}
+	}
+
+	.header__bag {
+		width: 20%;
+		float: left;
+		text-align: center;
+
+		.bag__image {
+			width: auto;
+			margin: 0 auto;
+		}
+
+		.bag__text {
+			font-family: $font-rob-bd;
+			font-size: 14px;
+			color: #b3b3b3;
+			margin: 0;
+
+			span {
+				color: #d73a1e;
+			}
+		}
+	}
+
+	.header__description {
+		float: left;
+		width: 100%;
+		background: #e6e6e6;
+		padding: 15px 0;
+		text-align: center;
+
+		.description__text {
+			font-family: $font-rob-bd;
+			font-size: 16px;
+			color: #636363;
+			margin: 0;
+		}
+	}
+	
+}
