@@ -1,5 +1,5 @@
-.apps {
-	.apps__wrapper {
+.products {
+	.products__wrapper {
 		width: calc(100% - 20px);
 		margin: 0 auto;
 		@include tablet {
@@ -12,7 +12,7 @@
 		.wrapper__title {
 			font-family: $font-bold;
 			font-size: 24px;
-			color: $purple;
+			color: $black;
 			text-align: center;
 			padding: 0 20px;
 			margin-top: 40px;
@@ -39,10 +39,12 @@
 			}
 
 			.group__item {
-				width: 100%;
+				width: 50%;
 				height: auto;
 				margin-bottom: 20px;
-				padding: 20px;
+				padding: 20px 0;
+				float: left;
+				text-align: center;
 				@include border-radius(5px);
 				@include tablet {
 					width: 48%;
@@ -58,7 +60,7 @@
 				}
 
 				.item__icon {
-					width: 32px;
+					width: 100%;
 
 					@include tablet {
 						width: auto;
@@ -72,15 +74,18 @@
 				}
 
 				.item__description {
-					font-family: $font-rob-rg;
+					font-family: $font-rob-md;
 					font-size: 14px;
-					color: $white;
-					height: 75px;
-					text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+					font-weight: bold;
+					color: $black;
+					height: auto;
 					@include tablet {
 						font-size: 16px;
-						height: 55px;
 						padding: 0 5px 0 0;
+					}
+
+					span {
+						color: #d73a1e;
 					}
 				}
 

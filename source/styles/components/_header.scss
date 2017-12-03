@@ -1,55 +1,108 @@
 .header {
-	padding: 10px 5px 0 5px;
+	padding: 10px 0 0 0;
 	@include clearfix();
-	.navbar-toggle {
+	.header__navbar {
+		width: 20%;
 		float: left;
 		@include desktop {
 			display: none;
 		}
-
-		.icon {
-			position: relative;
-			width: 30px;
-			height: 24px;
-			cursor: pointer;
-			-webkit-transform: translateY(0);
-			transform: translateY(0);
-			transition: all .3s ease;
-		}
-		.line {
-			height: 4px;
-			width: 30px;
-			margin: 2px 0;
-			background: $purple;
-			position: absolute;
-			border-radius: 10px;
-			transition: all .3s ease;
-			&.line-top {
-				transform: rotate(0);
-			}
-			&.line-mid {
-				opacity: 1;
-				transform: rotate(0) translateY(7px);
-			}
-			&.line-bot {
-				transform: rotate(0) translateY(14px);
-			}
-		}
-		&.close {
+		.navbar-toggle {
+			margin-top: 18px;
+	
 			.icon {
-				margin-right: 10px;
-				width: 18px;
-				transform: translateY(7px);
-				.line-top {
-					transform: rotate(45deg) translateY(0);
+				position: relative;
+				width: 30px;
+				height: 24px;
+				margin: 0 auto;
+				cursor: pointer;
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+				transition: all .3s ease;
+			}
+			.line {
+				height: 4px;
+				width: 30px;
+				margin: 2px 0;
+				background: $purple;
+				position: absolute;
+				border-radius: 10px;
+				transition: all .3s ease;
+				&.line-top {
+					transform: rotate(0);
 				}
-				.line-mid {
-					opacity: 0;
+				&.line-mid {
+					opacity: 1;
+					transform: rotate(0) translateY(7px);
 				}
-				.line-bot {
-					transform: rotate(-45deg) translateY(0);
+				&.line-bot {
+					transform: rotate(0) translateY(14px);
+				}
+			}
+			&.close {
+				.icon {
+					margin-right: 10px;
+					width: 18px;
+					transform: translateY(7px);
+					.line-top {
+						transform: rotate(45deg) translateY(0);
+					}
+					.line-mid {
+						opacity: 0;
+					}
+					.line-bot {
+						transform: rotate(-45deg) translateY(0);
+					}
 				}
 			}
 		}
 	}
+
+	.header__logo {
+		width: 60%;
+		float: left;
+
+		.logo__image {
+			width: 100%;
+			margin-top: 8px;
+		}
+	}
+
+	.header__bag {
+		width: 20%;
+		float: left;
+		text-align: center;
+
+		.bag__image {
+			width: auto;
+			margin: 0 auto;
+		}
+
+		.bag__text {
+			font-family: $font-rob-bd;
+			font-size: 14px;
+			color: #b3b3b3;
+			margin: 0;
+
+			span {
+				color: #d73a1e;
+			}
+		}
+	}
+
+	.header__description {
+		float: left;
+		width: 100%;
+		background: #e6e6e6;
+		padding: 15px 0;
+		text-align: center;
+
+		.description__text {
+			font-family: $font-rob-bd;
+			font-size: 16px;
+			color: #636363;
+			margin: 0;
+		}
+	}
+	
 }
