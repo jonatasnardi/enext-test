@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        {% set _basePath = "" %}
+        <title>{{ home.title }}</title>
+        <meta name="description" content="{{ home.description }}">
+        <meta name="keywords" content="{{ home.keywords }}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="icon" href="{{ _basePath }}img/favicon.ico" type="image/x-icon">
+        
+        {% include "./base/common-styles.html" %}
+    </head>
+    <body>
+        {% include "./components/header.html" %}
+
+        <section class="section section__wrapper">
+            <div class="section__content">
+                {% include "./components/aplicativos.html" %}
+            </div>
+        </section>   
+        {% include "./components/footer.html" %}
+        {% include "./components/gateway.html" %}
+        {% include "./components/menu.html" %}
+
+        {% include "./base/common-scripts.html" %}
+        {% include "./base/gtm-body.html" %}
+    </body>
+</html>

@@ -1,0 +1,222 @@
+.apps {
+	.apps__wrapper {
+		width: calc(100% - 20px);
+		margin: 0 auto;
+		@include tablet {
+			width: calc($tablet-width - 20px);
+		}
+		@include desktop {
+			width: $desktop-width;
+		}
+
+		.wrapper__title {
+			font-family: $font-bold;
+			font-size: 24px;
+			color: $purple;
+			text-align: center;
+			padding: 0 20px;
+			margin-top: 40px;
+			@include tablet {
+				font-size: 32px;
+				margin-bottom: 5px;
+			}
+		}
+
+		.wrapper__subtitle {
+			font-family: $font-rob-rg;
+			font-size: 16px;
+			color: $gray-md;
+			text-align: center;
+			padding: 0 45px;
+		}
+
+		.wrapper__group {			
+			padding: 0 10px;
+			list-style: none;
+			@include clearfix();
+			@include tablet {
+				padding: 0;
+			}
+
+			.group__item {
+				width: 100%;
+				height: auto;
+				margin-bottom: 20px;
+				padding: 20px;
+				@include border-radius(5px);
+				@include tablet {
+					width: 48%;
+					height: 448px;
+					float: left;
+					margin: 0 4% 0 0;
+					padding: 30px;
+					padding-top: 193px;
+
+					&:last-child {
+						margin: 0 0 0 0;
+					}
+				}
+
+				.item__icon {
+					width: 32px;
+
+					@include tablet {
+						width: auto;
+					}
+				}
+
+				.item__title {
+					font-family: $font-rob-bd;
+					font-size: 20px;
+					color: $white;
+				}
+
+				.item__description {
+					font-family: $font-rob-rg;
+					font-size: 14px;
+					color: $white;
+					height: 75px;
+					text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+					@include tablet {
+						font-size: 16px;
+						height: 55px;
+						padding: 0 5px 0 0;
+					}
+				}
+
+				.item__button {
+					display: inline-block;
+					margin-bottom: 10px;
+					font-family: $font-rob-md;
+				}
+
+				&[data-app*="goRead"] {
+					background: url('../img/vivo-turbo-aplicativos-bg-goread-m.png') center 0 no-repeat;
+					background-size: 100% auto;
+					@include tablet {
+						background: url('../img/vivo-turbo-aplicativos-bg-goread.png') center 0 no-repeat;
+					}
+				}
+
+				&[data-app*="nba"] {
+					background: url('../img/vivo-turbo-aplicativos-bg-nba-m.png') center 0 no-repeat;
+					background-size: 100% auto;
+					@include tablet {
+						background: url('../img/vivo-turbo-aplicativos-bg-nba.png') center 0 no-repeat;
+					}
+				}
+			}
+		}
+
+		.wrapper__group-info {		
+			padding: 0 15px;
+			list-style: none;
+			@include clearfix();
+			@include tablet {
+				padding: 0;
+				margin: 30px 0;
+			}
+
+			.group-info__item {
+				width: 100%;
+				height: auto;
+				margin-bottom: 20px;
+				padding: 200px 20px 10px 20px;
+				background: $green;
+				text-align: center;
+				@include min-width(480px) {
+					padding: 290px 20px 10px 20px;
+				}
+				@include border-radius(5px);
+				@include tablet {
+					height: 175px;
+					float: left;
+					margin: 0 0 30px 0;
+					padding: 0 0 0 340px;
+					text-align: left;
+				}
+
+				.item__icon {
+
+				}
+
+				.item__title {
+					font-family: $font-bold;
+					font-size: 22px;
+					color: $white;
+					padding: 0 14px;
+					@include tablet {
+						font-size: 15px;
+						width: 54%;
+					    float: left;
+					    height: 50%;
+					    margin: 0;
+					    padding: 35px 0 0 0;
+					}
+
+					@include desktop {
+						font-size: 18px;
+					}
+				}
+
+				.item__description {
+					font-family: $font-rob-rg;
+					font-size: 16px;
+					color: $white;
+					height: 75px;
+					@include tablet {
+						font-size: 14px;
+					    width: 54%;
+					    float: left;
+					    margin: 0;
+					    height: 50%;
+					    padding: 10px 0 0 0;
+					}
+				}
+
+				.item__container-button {
+					display: inline-block;
+					@include tablet {
+						width: 46%;
+						padding: 70px 0 0 0;
+					}
+
+					.container-button__button {
+						display: block;
+						font-family: $font-rob-md;
+						background: transparent;
+						border: 2px solid $white;
+						margin-bottom: 30px;
+						text-align: center;
+						@include tablet {
+							width: 150px;
+							margin: 0 auto;
+						}
+
+						&:hover {
+							background: $white;
+							color: $purple-dk;
+						}
+					}
+				}
+
+				&[data-info*="renew"] {
+					background: $purple url('../img/vivo-turbo-aplicativos-bg-renovacao-m.png') center 0 no-repeat;
+					background-size: 100% auto;
+					@include tablet {
+						background: $purple url('../img/vivo-turbo-aplicativos-bg-renovacao.png') 0 center no-repeat;
+					}
+				}
+
+				&[data-info*="social-media"] {
+					background: $purple-dk url('../img/vivo-turbo-aplicativos-bg-redes-sociais-m.png') center 0 no-repeat;
+					background-size: 100% auto;
+					@include tablet {
+						background: $purple-dk url('../img/vivo-turbo-aplicativos-bg-redes-sociais.png') 0 center no-repeat;
+					}
+				}
+			}
+		}
+	}
+    
+}

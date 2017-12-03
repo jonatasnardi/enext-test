@@ -1,0 +1,73 @@
+
+
+#modalGateway{
+	display: none;
+	.modal-header{
+		font-family: $font-regular;
+		height: 60px;
+
+		.modal-title {
+			margin-top: 0;
+
+			@include tablet {
+				margin-left: 20px;
+    			margin-right: 20px;
+			}
+		}
+	}
+
+	.modal-dialog{
+		@include center(absolute);
+
+	}
+
+	.modal-body{
+		text-align: center;
+		
+		.modal-content{
+			@include desktop{
+				padding: 0 20px;
+			}
+		}
+
+		
+		select{
+			font-family: $font-regular;
+			font-size: 16px;
+			margin-left: 10px;
+			min-width: 50px;
+			height: 30px;
+			border: 1px solid $purple;
+			text-align: left;
+			
+			
+			@include max-width(1023){
+				width: 100%;
+				display: block;
+				margin: 10px 0 10px 0 ;
+			}
+			
+			&:first-child{
+				margin-left: 0;
+			}
+
+			&.disabled{
+				opacity: 0.5;
+			}
+		}
+
+		.btn {
+			padding: 5px;
+			font-size: 14px;
+			min-width: 48px;
+			vertical-align: top;
+			margin: 0 10px;
+			
+			&.disabled{
+				pointer-events: none;
+				opacity: 0.5;
+			}
+		}
+	}
+}
+

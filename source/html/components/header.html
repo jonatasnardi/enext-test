@@ -1,0 +1,53 @@
+<header class="header">
+    <div class="white__bar"></div>
+    <nav class="header__center">
+        <ul class="header__box-list header__box-left">
+            <li class="header__box-list_item header__box-left_item header__burguer">
+                <a href="javascript:void(0)" class="menu__burguer"></a>
+            </li>
+            <li class="header__box-list_item header__box-left_item header__logo">
+                <a href="{{ _basePath }}" class="header__logo-link"></a>
+            </li>
+        </ul>
+        <ul class="header__box-list header__box-center">
+            <li class="header__box-list_item header__box-center_item">
+                <a href="javascript:void(0)" class="header__link" data-home-section="share-section">Compartilhe</a>
+            </li>
+            <li class="header__box-list_item header__box-center_item">
+                <a href="javascript:void(0)" class="header__link" data-home-section="recharge-section">Recarga</a>
+            </li>
+            <li class="header__box-list_item header__box-center_item">
+                <a href="javascript:void(0)" class="header__link" data-home-section="apps-section">Aplicativos exclusivos</a>
+            </li>
+        </ul>
+        <ul class="header__box-list header__box-right">
+            <li class="header__box-list_item header__box-right_item">
+                <a href="javascript:void(0)" class="button yellow header__assine-button header__link animate-btn curmudgeon mob" alt="Clique aqui para assinar Vivo Turbo" title="Clique aqui para assinar Vivo Turbo">Assine Já</a>
+                <a href="javascript:void(0)" class="button yellow header__assine-button header__link animate-btn curmudgeon desk" alt="Clique aqui para assinar Vivo Turbo" title="Clique aqui para assinar Vivo Turbo">Assine Vivo Turbo</a>
+            </li>
+            <li class="header__box-list_item header__box-right_item header__regions">
+                <form class="chooseLocation">
+                    <span class="icon-pin-reg"></span>
+                    <!--<label for="selectState">Você está em:</label>-->
+                    <div class="ent-select">
+                        <p id="regionCompass">
+                            <span id="city"></span>
+                            <span class="separator"> - </span>
+                            <span id="state"></span>
+                            <img class="icon desk white" src="{{ _basePath }}img/vivo-turbo-icone-bussola-branco.png" />
+                            <img class="icon desk purple" src="{{ _basePath }}img/vivo-turbo-icone-bussola-roxo.png" />
+                        </p>
+                        <!-- <select name="selectState" class="selectState">
+                            <option value=""></option>
+                        </select> -->
+                        <!-- <img class="icon desk" src="{{ _basePath }}img/svg/vivo-turbo-seta-baixo.svg" />
+                        <img class="icon mob" src="{{ _basePath }}img/svg/vivo-turbo-seta-baixo-mob.svg" /> -->
+                    </div><!--ent-select-->
+                </form>
+                <!--<a href="javascript:void(0)" class="header__link header__regions">SP</a>-->
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section class="header-aux">&nbsp;</section>
