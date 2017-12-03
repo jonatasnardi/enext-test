@@ -3,13 +3,18 @@
 	padding: 20px;
 	@include clearfix();
 	.footer__wrapper {
+		max-width: $desktop-width;
 		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		@include clearfix();
 		.wrapper__newsletter {
 			background: $white;
 			padding: 10px 20px;
 			@include tablet {
 				float: right;
 				width: 45%;
+				padding: 10px 20px 30px 20px;
 			}
 	
 			.newsletter__title {
@@ -56,7 +61,8 @@
 					cursor: pointer;
 					@include border-radius(5px);
 
-					@include tablet {
+					&:hover {
+						background: darken(#d73a1e, 7%);
 					}
 				}
 			}
@@ -82,11 +88,25 @@
 					.item__text {
 						margin-top: 0px;
 						margin-bottom: 0px;
+						-webkit-transition: left 0.2s ease-in;
+						-moz-transition: left 0.2s ease-in;
+						-o-transition: left 0.2s ease-in;
+						transition: left 0.2s ease-in;
+						position: relative;
+						left:0;
+						&:hover {
+							left: 5px;
+							
+						}
 
 						.text__link {
 							color: #db3f1e;
 							font-family: $font-rob-md;
 							font-size: 16px;
+							&:hover {
+								color: darken(#db3f1e, 5%);
+								
+							}
 						}
 					}
 					
@@ -108,13 +128,25 @@
 					@include tablet {
 						width: 60px;
 						margin-bottom: 30px;
+						margin-top: 20px;
 						text-align: left;
 					}
 
-					.item__icon {
-						margin: 0 auto;
+					.item__link {
+						.item__icon {
+							margin: 0 auto;
+							-webkit-transition: top 0.2s ease-in;
+							-moz-transition: top 0.2s ease-in;
+							-o-transition: top 0.2s ease-in;
+							transition: top 0.2s ease-in;
+							position: relative;
+							top: 0;
+							&:hover {
+								top: -6px;
+								
+							}
+						}
 					}
-					
 				}
 			}
 

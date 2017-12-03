@@ -19,52 +19,85 @@
     </head>
     <body>
         <header class="header">
-    <div class="header__navbar">
-        <div class="navbar-toggle"> <!-- close -->
-            <div class="icon" data-click="menu">
-                <div class="line line-top"></div>
-                <div class="line line-mid"></div>
-                <div class="line line-bot"></div>
+    <div class="header__wrapper">
+        <div class="header__navbar">
+            <div class="navbar-toggle"> <!-- close -->
+                <div class="icon" data-click="menu">
+                    <div class="line line-top"></div>
+                    <div class="line line-mid"></div>
+                    <div class="line line-bot"></div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="header__logo">
-        <img src="img/logo.png" alt="" class="logo__image">
-    </div>
+        <div class="header__logo">
+            <img src="img/logo.png" alt="" class="logo__image">
+        </div>
 
-    <div class="header__search only-desk">
-        <form action="" id="formRecharge" class="box__form">
-            <input name="stock" type="text" title="Search our stock" placeholder="Search our stock" class="form__stock" id="stockForm" autocomplete="on">
-        </form>
-    </div>
+        <div class="header__search only-desk">
+            <form action="" id="formRecharge" class="box__form">
+                <input name="stock" type="text" title="Search our stock" placeholder="Search our stock" class="form__stock" id="stockForm" autocomplete="on">
+            </form>
+        </div>
 
-    <div class="header__information only-desk">
-        <p class="information__text">Free shipping <br><span>on orders over $50</span></p>
-    </div>
+        <div class="header__information only-desk">
+            <p class="information__text">Free shipping <br><span>on orders over $50</span></p>
+        </div>
 
-    <div class="header__bag">
-        <img src="img/icon-bag.png" alt="" class="bag__image">
-        <p class="bag__text">BAG: <span>1</span></p>
-    </div>
+        <div class="header__bag">
+            <img src="img/icon-bag.png" alt="" class="bag__image">
+            <p class="bag__text">BAG: <span>1</span></p>
+        </div>
 
-    <div class="header__description">
-        <p class="description__text">Free shipping on orders over $50</p>
+        <div class="header__description">
+            <p class="description__text">Free shipping on orders over $50</p>
+        </div>
     </div>
-    
 </header>
 
         <section class="section section__wrapper">
             <div class="section__content">
                 <section class="menu">
-    <div class="menu__container">
-        <!-- <div class="navbar-toggle">
-            <div class="icon" data-click="menu">
-                <div class="line line-top"></div>
-                <div class="line line-mid"></div>
-                <div class="line line-bot"></div>
-            </div>
-        </div> -->
+    <div class="menu__wrapper">
+        <ul class="wrapper__group">
+            <li class="group__item">
+                <p class="item__text">
+                    <a href="javascript:void(0);" class="text__link" alt="Potions" title="Potions">Potions &#11167;</a>
+                </p>
+            </li>
+            <li class="group__item">
+                <p class="item__text">
+                    <a href="javascript:void(0);" class="text__link" alt="Ingredients" title="Ingredients">Ingredients &#11167;</a>
+                </p>
+            </li>
+            <li class="group__item">
+                <p class="item__text">
+                    <a href="javascript:void(0);" class="text__link" alt="Books" title="Books">Books &#11167;</a>
+                </p>
+            </li>
+            <li class="group__item">
+                <p class="item__text">
+                    <a href="javascript:void(0);" class="text__link" alt="Supplies" title="Supplies">Supplies &#11167;</a>
+                </p>
+            </li>
+            <li class="group__item">
+                <p class="item__text">
+                    <a href="javascript:void(0);" class="text__link" alt="Charms" title="Charms">Charms &#11167;</a>
+                </p>
+            </li>
+            <li class="group__item">
+                <p class="item__text">
+                    <a href="javascript:void(0);" class="text__link" alt="Clearance" title="Clearance">Clearance!</a>
+                </p>
+            </li>
+            <li class="group__item sign">
+                <p class="item__text">
+                    <a href="javascript:void(0);" class="text__link" alt="Sign In" title="Sign In">Sign In</a>
+                    <span>or</span>
+                    <a href="javascript:void(0);" class="text__link featured" alt="Sign In" title="Sign In">Sign Up</a>
+                </p>
+            </li>
+        </ul>
     </div>
 </section>
                 <section class="products" id="products-section">
@@ -107,7 +140,7 @@
 			<h3 class="newsletter__subtitle">Sign up for our newsletter & get exclusive discounts!</h3>
 			<form action="" id="formRecharge" class="box__form">
 				<input name="email" type="text" title="Enter your email" placeholder="Enter your email" class="form__email" id="emailForm" autocomplete="on">
-				<button class="button form__button curmudgeon" id="btnSubmit" type="submit" value="Submit">SUBMIT</button>
+				<button class="button form__button" id="btnSubmit" type="submit" value="Submit">SUBMIT</button>
 			</form>
 		</div>
 
@@ -115,45 +148,55 @@
 			<ul class="social__group-links only-desk">
 				<li class="group-links__item">
 					<p class="item__text">
-						<a href="javascript:void(0);" class="text__link">COMPANY</a>
+						<a href="javascript:void(0);" class="text__link" alt="COMPANY" title="COMPANY">COMPANY</a>
 					</p>
 				</li>
 				<li class="group-links__item">
 					<p class="item__text">
-						<a href="javascript:void(0);" class="text__link">CONTACT US</a>
+						<a href="javascript:void(0);" class="text__link" alt="CONTACT US" title="CONTACT US">CONTACT US</a>
 					</p>
 				</li>
 				<li class="group-links__item">
 					<p class="item__text">
-						<a href="javascript:void(0);" class="text__link">SHIPPING</a>
+						<a href="javascript:void(0);" class="text__link" alt="SHIPPING" title="SHIPPING">SHIPPING</a>
 					</p>
 				</li>
 				<li class="group-links__item">
 					<p class="item__text">
-						<a href="javascript:void(0);" class="text__link">RETURNS</a>
+						<a href="javascript:void(0);" class="text__link" alt="RETURNS" title="RETURNS">RETURNS</a>
 					</p>
 				</li>
 				<li class="group-links__item">
 					<p class="item__text">
-						<a href="javascript:void(0);" class="text__link">CAREERS</a>
+						<a href="javascript:void(0);" class="text__link" alt="CAREERS" title="CAREERS">CAREERS</a>
 					</p>
 				</li>
 			</ul>
 			<ul class="social__group">
 				<li class="group__item">
-					<img src="img/icon-facebook.png" alt="" class="item__icon">
+					<a href="https://www.facebook.com/" target="_blank" class="item__link" alt="Facebook" title="Facebook">
+						<img src="img/icon-facebook.png" alt="" class="item__icon">
+					</a>
 				</li>
 				<li class="group__item">
-					<img src="img/icon-twitter.png" alt="" class="item__icon">
+					<a href="https://twitter.com/" target="_blank" class="item__link" alt="Twitter" title="Twitter">
+						<img src="img/icon-twitter.png" alt="" class="item__icon">
+					</a>
 				</li>
 				<li class="group__item">
-					<img src="img/icon-pinterest.png" alt="" class="item__icon">
+					<a href="https://www.pinterest.com/" target="_blank" class="item__link" alt="Pinterest" title="Pinterest">
+						<img src="img/icon-pinterest.png" alt="" class="item__icon">
+					</a>
 				</li>
 				<li class="group__item">
-					<img src="img/icon-tumblr.png" alt="" class="item__icon">
+					<a href="https://www.tumblr.com/" target="_blank" class="item__link" alt="Tumblr" title="Tumblr">
+						<img src="img/icon-tumblr.png" alt="" class="item__icon">
+					</a>
 				</li>
 				<li class="group__item">
-					<img src="img/icon-google.png" alt="" class="item__icon">
+					<a href="https://plus.google.com/discover" target="_blank" class="item__link" alt="Google+" title="Google+">
+						<img src="img/icon-google.png" alt="" class="item__icon">
+					</a>
 				</li>
 			</ul>
 			<p class="social__rights">© 2015 Merlin's Potions. All Rights Reserved</p>

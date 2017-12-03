@@ -4,6 +4,14 @@
 		padding: 10px 40px 0 40px;	
 	}
 	@include clearfix();
+
+	.header__wrapper {
+		max-width: $desktop-width;
+		width: 100%;
+		height: auto;
+		@include clearfix();
+		margin: 0 auto;
+	}	
 	.header__navbar {
 		width: 20%;
 		float: left;

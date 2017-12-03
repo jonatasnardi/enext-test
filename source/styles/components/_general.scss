@@ -168,7 +168,7 @@ body{
 	&.curmudgeon {
 		&:hover {
 		  	&::before {
-		    	border-bottom: 3px solid #d54b41;
+		    	border-bottom: 3px solid $black;
 		    	border-left: 0;
 		    	-webkit-transform-origin: 0% 100%;
 		    	@include border-radius(0 0 3px 3px);
@@ -183,74 +183,23 @@ body{
 	}
 }
 
+// SCROLL BAR
 
-.animated-box {
-  	position: relative;
-  	display: inline-block;
-  	-webkit-transform: scale(1);
-  	-ms-transform: scale(1);
-  	&::before, &::after {
-	    width: 100%;
-	    height: 100%;
-	    z-index: 3;
-	    content: '';
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    box-sizing: border-box;
-	    -webkit-transform: scale(1);
-	    -ms-transform: scale(1);
-	    transition: 0.3s;
-  	}
-
-  	&.stop-animation {
-  		&::after, &::before {
-	    	-webkit-transform: scale(0);
-	    	-ms-transform: scale(0);
-	  	}
-  	}
-
-  	&.foo {
-	  	&::before {
-	    	border-bottom: 3px solid $orange;
-	    	border-left: 3px solid $orange;
-	    	-webkit-transform-origin: 0 100%;
-	  	}
-	  	&::after {
-	    	border-top: 3px solid $orange;
-	    	border-right: 3px solid $orange;
-	    	-webkit-transform-origin: 100% 0%;
-	  	}
-	}
-
-	&.bar {
-	  	&::before {
-	    	border-bottom: 3px solid $orange;
-	    	border-left: 3px solid $orange;
-	    	-webkit-transform-origin: 100% 0%;
-	  	}
-	  	&::after {
-	    	border-top: 3px solid $orange;
-	    	border-right: 3px solid $orange;
-	    	-webkit-transform-origin: 0% 100%;
-	  	}
-	}
-
-	&.curmudgeon {
-	  	&::before {
-	    	border-bottom: 3px solid $orange;
-	    	border-left: 0;
-	    	-webkit-transform-origin: 0% 100%;
-	  	}
-	  	&::after {
-	    	border-top: 0;
-	    	border-right: 0;
-	    	-webkit-transform-origin: 50% 50%;
-	  	}
-	}
+body ::-webkit-scrollbar, html ::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
 }
-
-
-
-
-
+  
+body ::-webkit-scrollbar-thumb, html ::-webkit-scrollbar-thumb {
+	background: $purple;
+	cursor: pointer;
+}
+  
+body ::-webkit-scrollbar-track, html ::-webkit-scrollbar-track {
+	background: rgba(255, 255, 255, 0.8);
+}
+  
+body body, html body {
+	scrollbar-face-color: #b6b9ad;
+	scrollbar-track-color: rgba(255, 255, 255, 0.8);
+}

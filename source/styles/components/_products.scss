@@ -39,6 +39,11 @@
 				padding: 20px 0;
 				float: left;
 				text-align: center;
+				-webkit-transition: all 0.2s ease-in;
+				-moz-transition: all 0.2s ease-in;
+				-o-transition: all 0.2s ease-in;
+				transition: all 0.2s ease-in;
+				position: relative;
 				@include border-radius(5px);
 				@include tablet {
 					width: 33.333%;
@@ -49,6 +54,11 @@
 					&:last-child {
 						margin: 0 0 0 0;
 					}
+				}
+
+				&:hover {
+					cursor: pointer;
+					background: darken($white, 6%);
 				}
 
 				.item__icon {
