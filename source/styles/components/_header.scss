@@ -1,10 +1,13 @@
 .header {
 	padding: 10px 0 0 0;
+	@include tablet {
+		padding: 10px 40px 0 40px;	
+	}
 	@include clearfix();
 	.header__navbar {
 		width: 20%;
 		float: left;
-		@include desktop {
+		@include tablet {
 			display: none;
 		}
 		.navbar-toggle {
@@ -61,6 +64,9 @@
 	.header__logo {
 		width: 60%;
 		float: left;
+		@include tablet {
+			width: 240px;	
+		}
 
 		.logo__image {
 			width: 100%;
@@ -90,12 +96,67 @@
 		}
 	}
 
+	.header__search {
+		float: left;
+		width: 23%;
+		padding: 15px 0;
+		margin-left: 7%;
+		text-align: left;
+		
+
+		.box__form {
+			@include clearfix();
+			.form__stock {
+				width: 100%;
+				float: left;
+				text-align: left;
+				font-family: $font-rob-md;
+				font-size: 16px;
+				background: url("../img/icon-search.png") no-repeat 5px center;
+				border: 1.5px $gray-dark solid;
+				padding: 8px 20px 8px 40px;
+				color: #a9abc3;
+				margin: 0 5% 0 0;
+				@include border-radius(5px);
+
+				&.error {
+					border: 2px $red solid;
+					color: $red;
+				}
+			}
+		}
+	}
+
+	.header__information {
+		float: left;
+		width: 13%;
+		margin-left: 7%;
+		padding: 15px 0;
+		text-align: left;
+		
+
+		.information__text {
+			font-family: $font-rob-bd;
+			font-size: 18px;
+			color: #d73a1e;
+			margin: 0;
+			font-style: italic;
+			span {
+				font-size: 16px;
+			}
+		}
+	}
+
 	.header__description {
 		float: left;
 		width: 100%;
 		background: #e6e6e6;
 		padding: 15px 0;
 		text-align: center;
+		@include tablet {
+			display: none;
+		}
+		
 
 		.description__text {
 			font-family: $font-rob-bd;

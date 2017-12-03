@@ -19,6 +19,8 @@
 			@include tablet {
 				font-size: 32px;
 				margin-bottom: 5px;
+				text-align: left;
+				padding-left: 0;
 			}
 		}
 
@@ -47,10 +49,9 @@
 				text-align: center;
 				@include border-radius(5px);
 				@include tablet {
-					width: 48%;
+					width: 33.333%;
 					height: 448px;
 					float: left;
-					margin: 0 4% 0 0;
 					padding: 30px;
 					padding-top: 193px;
 
@@ -62,9 +63,6 @@
 				.item__icon {
 					width: 100%;
 
-					@include tablet {
-						width: auto;
-					}
 				}
 
 				.item__title {
