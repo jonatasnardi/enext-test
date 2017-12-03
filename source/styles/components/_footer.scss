@@ -7,6 +7,10 @@
 		.wrapper__newsletter {
 			background: $white;
 			padding: 10px 20px;
+			@include tablet {
+				float: right;
+				width: 45%;
+			}
 	
 			.newsletter__title {
 				font-family: $font-rob-md;
@@ -35,13 +39,6 @@
 					margin: 0 5% 0 0;
 					@include border-radius(5px);
 
-					@include tablet {
-						display: inline-block;
-						width: 65%;
-						text-align: left;
-						margin-top: 30px;
-					}
-
 					&.error {
 						border: 2px $red solid;
 						color: $red;
@@ -60,20 +57,41 @@
 					@include border-radius(5px);
 
 					@include tablet {
-						padding: 16px 0;
-						display: inline-block;
-						width: 30%;
-						margin-left: 2.5%;
-					}
-
-					@include desktop {
-						margin-left: 4%;
 					}
 				}
 			}
 		}
 
 		.wrapper__social {
+			@include tablet {
+				float: left;
+				width: 55%;
+			}
+			.social__group-links {
+				list-style: none;
+				width: 100%;
+				padding: 0;
+				@include clearfix();
+	
+				.group-links__item {
+					width: 27%;
+					height: auto;
+					float: left;
+					text-align: left;
+
+					.item__text {
+						margin-top: 0px;
+						margin-bottom: 0px;
+
+						.text__link {
+							color: #db3f1e;
+							font-family: $font-rob-md;
+							font-size: 16px;
+						}
+					}
+					
+				}
+			}
 			.social__group {
 				list-style: none;
 				width: 100%;
@@ -87,10 +105,16 @@
 					height: auto;
 					float: left;
 					text-align: center;
+					@include tablet {
+						width: 60px;
+						margin-bottom: 30px;
+						text-align: left;
+					}
 
 					.item__icon {
 						margin: 0 auto;
 					}
+					
 				}
 			}
 
@@ -100,6 +124,11 @@
 				color: #6c7097;
 				margin: 10px 0;
 				text-align: center;
+
+				@include tablet {
+					text-align: left;
+				}
+		
 			}
 		}
 	}

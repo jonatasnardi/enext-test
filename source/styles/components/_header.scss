@@ -78,10 +78,18 @@
 		width: 20%;
 		float: left;
 		text-align: center;
+		@include tablet {
+			width: 15%;	
+		}
 
 		.bag__image {
 			width: auto;
 			margin: 0 auto;
+			@include tablet {
+				float: left;
+				margin-left: 30%;
+				margin-top: 10px;
+			}
 		}
 
 		.bag__text {
@@ -89,6 +97,11 @@
 			font-size: 14px;
 			color: #b3b3b3;
 			margin: 0;
+			@include tablet {
+				float: left;
+				margin-left: 10px;
+				margin-top: 25px;
+			}
 
 			span {
 				color: #d73a1e;
@@ -129,7 +142,7 @@
 
 	.header__information {
 		float: left;
-		width: 13%;
+		width: 18%;
 		margin-left: 7%;
 		padding: 15px 0;
 		text-align: left;
