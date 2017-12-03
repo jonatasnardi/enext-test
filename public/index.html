@@ -19,55 +19,13 @@
     </head>
     <body>
         <header class="header">
-    <div class="white__bar"></div>
-    <nav class="header__center">
-        <ul class="header__box-list header__box-left">
-            <li class="header__box-list_item header__box-left_item header__burguer">
-                <a href="javascript:void(0)" class="menu__burguer"></a>
-            </li>
-            <li class="header__box-list_item header__box-left_item header__logo">
-                <a href="" class="header__logo-link"></a>
-            </li>
-        </ul>
-        <ul class="header__box-list header__box-center">
-            <li class="header__box-list_item header__box-center_item">
-                <a href="javascript:void(0)" class="header__link" data-home-section="share-section">Compartilhe</a>
-            </li>
-            <li class="header__box-list_item header__box-center_item">
-                <a href="javascript:void(0)" class="header__link" data-home-section="recharge-section">Recarga</a>
-            </li>
-            <li class="header__box-list_item header__box-center_item">
-                <a href="javascript:void(0)" class="header__link" data-home-section="apps-section">Aplicativos exclusivos</a>
-            </li>
-        </ul>
-        <ul class="header__box-list header__box-right">
-            <li class="header__box-list_item header__box-right_item">
-                <a href="javascript:void(0)" class="button yellow header__assine-button header__link animate-btn curmudgeon mob" alt="Clique aqui para assinar Vivo Turbo" title="Clique aqui para assinar Vivo Turbo">Assine Já</a>
-                <a href="javascript:void(0)" class="button yellow header__assine-button header__link animate-btn curmudgeon desk" alt="Clique aqui para assinar Vivo Turbo" title="Clique aqui para assinar Vivo Turbo">Assine Vivo Turbo</a>
-            </li>
-            <li class="header__box-list_item header__box-right_item header__regions">
-                <form class="chooseLocation">
-                    <span class="icon-pin-reg"></span>
-                    <!--<label for="selectState">Você está em:</label>-->
-                    <div class="ent-select">
-                        <p id="regionCompass">
-                            <span id="city"></span>
-                            <span class="separator"> - </span>
-                            <span id="state"></span>
-                            <img class="icon desk white" src="img/vivo-turbo-icone-bussola-branco.png" />
-                            <img class="icon desk purple" src="img/vivo-turbo-icone-bussola-roxo.png" />
-                        </p>
-                        <!-- <select name="selectState" class="selectState">
-                            <option value=""></option>
-                        </select> -->
-                        <!-- <img class="icon desk" src="img/svg/vivo-turbo-seta-baixo.svg" />
-                        <img class="icon mob" src="img/svg/vivo-turbo-seta-baixo-mob.svg" /> -->
-                    </div><!--ent-select-->
-                </form>
-                <!--<a href="javascript:void(0)" class="header__link header__regions">SP</a>-->
-            </li>
-        </ul>
-    </nav>
+    <div class="navbar-toggle"> <!-- close -->
+        <div class="icon" data-click="menu">
+            <div class="line line-top"></div>
+            <div class="line line-mid"></div>
+            <div class="line line-bot"></div>
+        </div>
+    </div>
 </header>
 
 <section class="header-aux">&nbsp;</section>
@@ -75,6 +33,17 @@
 
         <section class="section section__wrapper">
             <div class="section__content">
+                <section class="menu">
+    <div class="menu__container">
+        <!-- <div class="navbar-toggle">
+            <div class="icon" data-click="menu">
+                <div class="line line-top"></div>
+                <div class="line line-mid"></div>
+                <div class="line line-bot"></div>
+            </div>
+        </div> -->
+    </div>
+</section>
                 <section class="apps" id="apps-section">
 	<div class="apps__wrapper">
 		<h2 class="wrapper__title">Quem tem Vivo Turbo curte muito mais</h2>
@@ -129,29 +98,6 @@
 	</div>
 </footer>
 
-        <section class="menu">
-    <div class="menu__container">
-        <ul class="menu__list">
-            <li class="menu__list-item"><a href="" class="menu__list-item_link" data-home-section="home-page">Home</a></li>
-            <li class="menu__list-item"><a href="compartilhe" class="menu__list-item_link" data-home-section="compartilhe-page">Compartilhe</a></li>
-            <li class="menu__list-item"><a href="javascript:void(0)" class="menu__list-item_link mob" data-home-section="recharge-section">Recarga</a></li>
-            <li class="menu__list-item"><a href="javascript:void(0)" class="menu__list-item_link mob" data-home-section="apps-section">Aplicativos exclusivos</a></li>
-            <li class="menu__list-item"><a href="venha-para-vivo" class="menu__list-item_link" data-home-section="venha-para-vivo-page">Venha para Vivo</a></li>
-            <li class="menu__list-item"><a href="pacotes-turbinados" class="menu__list-item_link" data-home-section="pacotes-turbinados-page">Pacotes turbinados</a></li>
-            <li class="menu__list-item"><a href="tire-suas-duvidas" class="menu__list-item_link" data-home-section="tire-suas-duvidas-page">Tire suas dúvidas</a></li>
-        </ul>
-        <div class="menu__app">
-            <img src="img/vivo-turbo-menu-s8.png" alt="" class="menu__app-photo">
-            <div class="menu__app-right">
-                <small class="menu__app-txt">Baixe o Meu Vivo:</small>
-                <h3 class="menu__app-title">App Meu Vivo</h3>
-                <p class="menu__app-subtitle">Tudo que você precisa, <br>na tela do seu celular.</p>
-                <a href="https://play.google.com/store/apps/details?id=br.com.vivo&referrer=utm_source%3Dlp-app-meu-vivo%26utm_medium%3Down%26utm_campaign%3Dportal%253Ameu-vivo%253Avivo%26utm_content%3Down%253Asitedesktop%253A-%253Abotao%253A-%253A-%26utm_term%3D&_ga=2.175747238.545537146.1501074711-491892541.1501074711" target="_blank" class="menu__app-button android"></a>
-                <a href="https://itunes.apple.com/us/app/meu-vivo/id475915064?ls=1&mt=8&utm_source=lp_aplicativo_meuvivo_itunes&utm_medium=botao_superior&utm_campaign=app_meu_vivo&_ga=2.175747238.545537146.1501074711-491892541.1501074711" target="_blank" class="menu__app-button ios"></a>
-            </div>
-        </div>
-    </div>
-</section>
 
         <!-- htmlmin:ignore -->
 <script src="scripts/vendors.js"></script>
