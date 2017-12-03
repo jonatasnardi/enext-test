@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        {% set _basePath = "" %}
+        <title>Merlin's Potions</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no">
+        
+        {% include "./base/common-styles.html" %}
+    </head>
+    <body>
+        {% include "./components/header.html" %}
+
+        <section class="section section__wrapper">
+            <div class="section__content">
+                {% include "./components/menu.html" %}
+                {% include "./components/products.html" %}
+            </div>
+        </section>   
+        {% include "./components/footer.html" %}
+
+        {% include "./components/modal-product.html" %}
+        {% include "./base/common-scripts.html" %}
+    </body>
+</html>

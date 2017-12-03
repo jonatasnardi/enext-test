@@ -1,0 +1,205 @@
+body{
+    // padding: 2px;
+	// opacity: 0;
+
+    @include desktop{
+		// margin: 16px;
+    }
+}
+
+.section__wrapper{
+    margin: 0 auto 0 auto;
+
+    @include desktop {
+        margin: 0 auto;
+    }
+}
+
+.section__content{
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.button {
+	border: none;
+    @include font-size(14);
+    font-family: $font-rob-md;
+	color: $white;
+	padding: 10px 15px;
+	background: $orange;
+	@include border-radius(3px);
+	@include transition-duration(0.3s);
+
+	&:hover { background: darken($orange, 7%); color: $white; }
+	&:focus { background: darken($orange, 7%); color: $white; }
+	&:active { -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2); box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2); }
+}
+
+.store__app-button{
+	width: 130px;
+	height: 40px;
+	display: block;
+	background-repeat: no-repeat;
+	cursor: pointer;
+
+
+	&.android{
+		background-image: url(../img/vivo-turbo-menu-btn-android.png);
+	}
+
+	&.ios{
+		background-image: url(../img/vivo-turbo-menu-btn-apple.png);
+	}
+
+	&.hide{
+		display: none;
+	}
+}
+
+.item__circle-number{
+	@include font-size(16);
+	font-family: $font-rob-md;
+	line-height: 80px;
+	text-align: center;
+	color: #7850a0;
+	display: block;
+	background: url(../img/vivo-turbo-compartilhe-circulo-number.png) no-repeat;
+	background-size: 100% 100%;
+	width: 80px;
+	height: 80px;
+}
+
+.price__month {
+	font-family: $font-bold;
+	font-size: 15px;
+	color: $purple;
+	padding: 0 7px 0 0;
+	margin: 0 auto 10px auto;
+	text-align: left;
+
+	.month__rs {
+		font-family: $font-bold;
+		font-size: 16px;
+		color: $purple;
+		position: relative;
+		top: -15px;
+	}
+
+	.month__value {
+		font-family: $font-bold;
+		font-size: 42px;
+		color: $purple;
+		letter-spacing: -6px;
+		margin: 0 5px 0 0;
+	}
+
+	.month__cents {
+		font-family: $font-bold;
+		font-size: 16px;
+		color: $purple;
+		letter-spacing: -1px;
+		position: relative;
+		top: -14px;
+	}
+
+	.month__period {
+		font-family: $font-regular;
+		font-size: 12px;
+		color: $purple;
+		letter-spacing: -1px;
+		display: inline-block;
+		margin-left: -24px;
+	}
+}
+
+
+
+.button {
+  	position: relative;
+  	display: inline-block;
+  	transition: 0.5s;
+  	-webkit-transition: 0.5s;
+  	&:hover {
+  		&::after, &::before {
+	    	-webkit-transform: scale(1);
+	    	@include border-radius(0 0 3px 3px);
+	  	}
+  	}
+  	&::before, &::after {
+	    width: 100%;
+	    height: 100%;
+	    z-index: 3;
+	    content: '';
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    box-sizing: border-box;
+	    -webkit-transform: scale(0);
+	    transition: 0.5s;
+	    @include border-radius(0 0 3px 3px);
+  	}
+
+  	&.foo {
+	  	&::before {
+	    	border-bottom: 3px solid #d54b41;
+	    	border-left: 3px solid #d54b41;
+	    	-webkit-transform-origin: 0 100%;
+	  	}
+	  	&::after {
+	    	border-top: 3px solid #d54b41;
+	    	border-right: 3px solid #d54b41;
+	    	-webkit-transform-origin: 100% 0%;
+	  	}
+	}
+
+	&.bar {
+	  	&::before {
+	    	border-bottom: 3px solid #d54b41;
+	    	border-left: 3px solid #d54b41;
+	    	-webkit-transform-origin: 100% 0%;
+	  	}
+	  	&::after {
+	    	border-top: 3px solid #d54b41;
+	    	border-right: 3px solid #d54b41;
+	    	-webkit-transform-origin: 0% 100%;
+	  	}
+	}
+
+	&.curmudgeon {
+		&:hover {
+		  	&::before {
+		    	border-bottom: 3px solid $black;
+		    	border-left: 0;
+		    	-webkit-transform-origin: 0% 100%;
+		    	@include border-radius(0 0 3px 3px);
+		  	}
+		  	&::after {
+		    	border-top: 0;
+		    	border-right: 0;
+		    	-webkit-transform-origin: 50% 50%;
+		    	@include border-radius(0 0 3px 3px);
+		  	}
+	  	}
+	}
+}
+
+// SCROLL BAR
+
+body ::-webkit-scrollbar, html ::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+  
+body ::-webkit-scrollbar-thumb, html ::-webkit-scrollbar-thumb {
+	background: $purple;
+	cursor: pointer;
+}
+  
+body ::-webkit-scrollbar-track, html ::-webkit-scrollbar-track {
+	background: rgba(255, 255, 255, 0.8);
+}
+  
+body body, html body {
+	scrollbar-face-color: #b6b9ad;
+	scrollbar-track-color: rgba(255, 255, 255, 0.8);
+}
